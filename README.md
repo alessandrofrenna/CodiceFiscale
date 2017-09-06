@@ -24,5 +24,3 @@ N.B. I codici catastali dei comuni presenti nel documento json/district.json, so
 
 Futuri aggiornamenti:
  - Inserire elenco paesi stranieri
-
-
