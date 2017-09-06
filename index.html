@@ -4,7 +4,8 @@
     <title>Codice Fiscale DEMO APP</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/validate.js"></script>
+    <script src="frontend/Validation/validate.min.js"></script>
+
     <style> .invisible { display: none } </style>
   </head>
   <body>
@@ -14,7 +15,7 @@
         <form id="person" method="POST" action="">
 
           <label for="Name">Name: </label>
-            <input name="name" id="name" placeholder="Name" value="Alessadndro"><br><br>
+            <input name="name" id="name" placeholder="Name" value="Alessandro"><br><br>
 
           <label for="LastName">Last Name: </label>
             <input name="lastName" id="lastName" placeholder="Last Name" value="Frenna"><br><br>
@@ -38,9 +39,10 @@
 
 
     <p id="result"></p>
-    <script src="js/utilities.js"></script>
-    <script src="personClass.js"></script>
-    <script src="js/fiscalNumber.js"></script>
+    <script src="lib/utilities.js"></script>
+    <script src="lib/Person/Person.js"></script>
+    <script src="lib/fiscalNumber.js"></script>
+    <script src="frontend/data.js"></script>
     <script>
       let form = document.querySelector('form#person');
       let errorField = document.querySelector('div.validation-errors');
@@ -84,11 +86,11 @@
         } else {
           errorField.classList.add('invisible');
           let personData = getUserData(form.querySelectorAll('input'));
-          let code = new FiscalNumber(new Person (personData),
-                  function (code) {
-                      let result = document.querySelector('p#result').textContent = code.toString();
-                      return result;
-                  });
+          let person = new FiscalNumber(new Person (personData));
+          person.code().then(output => {
+              let result = document.querySelector('p#result');
+              result.textContent = output;
+          });
         }
       }
 
