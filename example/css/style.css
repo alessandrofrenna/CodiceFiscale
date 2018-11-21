@@ -1,0 +1,38 @@
+body {
+  background-color: rgba(134, 226, 213, 1);
+  height: 100%;
+}
+
+.container{
+  margin-top: -3.5%;
+}
+
+label.label {
+  color: rgba(1, 152, 117, 1)
+}
+
+.invisible {
+  display: none;
+}
+
+.is-primary {
+  height: 75px;
+  font-size: 2em;
+  font-weight: bold
+}
+
+.title {
+  font-size: 3em;
+  color: rgb(23, 97, 58)
+}
+
+.form {
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+}
+
+#cfCode {
+  font-weight: bold;
+  font-size: 2em
+}
