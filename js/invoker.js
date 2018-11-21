@@ -24,7 +24,6 @@ const setErrorToScreen = (errors) => {
       if(!inputField) {
         inputField = document.querySelector(`select#${keys[0]}`);
       }
-      console.log(keys[0], inputField.value);
       if(inputField.value.length <= 0){
         inputField.classList.add('is-danger');
         errorParagraph.classList.remove('invisible');
