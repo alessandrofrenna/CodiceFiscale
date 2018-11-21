@@ -2,3 +2,4 @@ scripts
 build
 node_modules
 json
+yarn.lock
