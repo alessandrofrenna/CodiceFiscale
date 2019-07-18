@@ -1,0 +1,26 @@
+{
+  "name": "codice_fiscale",
+  "version": "1.0.0",
+  "description": "Italian fiscal number generator",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessandrofrenna/CodiceFiscale.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alessandrofrenna/CodiceFiscale/issues"
+  },
+  "homepage": "https://github.com/alessandrofrenna/CodiceFiscale#readme",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}
